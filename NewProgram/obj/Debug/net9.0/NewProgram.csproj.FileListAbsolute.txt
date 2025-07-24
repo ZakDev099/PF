@@ -1,0 +1,5 @@
+C:\Users\30128282\Documents\GitHub\PF\PF\NewProgram\obj\Debug\net9.0\NewProgram.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\30128282\Documents\GitHub\PF\PF\NewProgram\obj\Debug\net9.0\NewProgram.AssemblyInfoInputs.cache
+C:\Users\30128282\Documents\GitHub\PF\PF\NewProgram\obj\Debug\net9.0\NewProgram.AssemblyInfo.cs
+C:\Users\30128282\Documents\GitHub\PF\PF\NewProgram\obj\Debug\net9.0\NewProgram.csproj.CoreCompileInputs.cache
+C:\Users\30128282\Documents\GitHub\PF\PF\NewProgram\obj\Debug\net9.0\NewProgram.sourcelink.json
