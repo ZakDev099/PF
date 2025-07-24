@@ -1,12 +1,15 @@
 ﻿namespace NewProgram;
+using System.IO;
 
 class Program
 {
     static void Main(string[] args)
     {
-        int value1 = Console.ReadLine();
-        int value2 = Console.ReadLine();
-        double result = value1 * value 2;
+        Console.WriteLine("Enter two values to multiply: ");
+        int val1 = Convert.ToInt32(Console.ReadLine());
+        int val2 = Convert.ToInt32(Console.ReadLine());
+        double result = val1 * val2;
         Console.WriteLine(result);
+        File.WriteAllText("Calc.txt" , Convert.ToString(result));
     }
 }

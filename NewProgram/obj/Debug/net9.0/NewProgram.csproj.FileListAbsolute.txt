@@ -3,3 +3,13 @@ C:\Users\30128282\Documents\GitHub\PF\PF\NewProgram\obj\Debug\net9.0\NewProgram.
 C:\Users\30128282\Documents\GitHub\PF\PF\NewProgram\obj\Debug\net9.0\NewProgram.AssemblyInfo.cs
 C:\Users\30128282\Documents\GitHub\PF\PF\NewProgram\obj\Debug\net9.0\NewProgram.csproj.CoreCompileInputs.cache
 C:\Users\30128282\Documents\GitHub\PF\PF\NewProgram\obj\Debug\net9.0\NewProgram.sourcelink.json
+C:\Users\30128282\Documents\GitHub\PF\PF\NewProgram\bin\Debug\net9.0\NewProgram.exe
+C:\Users\30128282\Documents\GitHub\PF\PF\NewProgram\bin\Debug\net9.0\NewProgram.deps.json
+C:\Users\30128282\Documents\GitHub\PF\PF\NewProgram\bin\Debug\net9.0\NewProgram.runtimeconfig.json
+C:\Users\30128282\Documents\GitHub\PF\PF\NewProgram\bin\Debug\net9.0\NewProgram.dll
+C:\Users\30128282\Documents\GitHub\PF\PF\NewProgram\bin\Debug\net9.0\NewProgram.pdb
+C:\Users\30128282\Documents\GitHub\PF\PF\NewProgram\obj\Debug\net9.0\NewProgram.dll
+C:\Users\30128282\Documents\GitHub\PF\PF\NewProgram\obj\Debug\net9.0\refint\NewProgram.dll
+C:\Users\30128282\Documents\GitHub\PF\PF\NewProgram\obj\Debug\net9.0\NewProgram.pdb
+C:\Users\30128282\Documents\GitHub\PF\PF\NewProgram\obj\Debug\net9.0\NewProgram.genruntimeconfig.cache
+C:\Users\30128282\Documents\GitHub\PF\PF\NewProgram\obj\Debug\net9.0\ref\NewProgram.dll
