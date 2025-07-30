@@ -1,0 +1,15 @@
+E:\Documents\GitHub\PF\Game\bin\Debug\net9.0\Game.exe
+E:\Documents\GitHub\PF\Game\bin\Debug\net9.0\Game.deps.json
+E:\Documents\GitHub\PF\Game\bin\Debug\net9.0\Game.runtimeconfig.json
+E:\Documents\GitHub\PF\Game\bin\Debug\net9.0\Game.dll
+E:\Documents\GitHub\PF\Game\bin\Debug\net9.0\Game.pdb
+E:\Documents\GitHub\PF\Game\obj\Debug\net9.0\Game.GeneratedMSBuildEditorConfig.editorconfig
+E:\Documents\GitHub\PF\Game\obj\Debug\net9.0\Game.AssemblyInfoInputs.cache
+E:\Documents\GitHub\PF\Game\obj\Debug\net9.0\Game.AssemblyInfo.cs
+E:\Documents\GitHub\PF\Game\obj\Debug\net9.0\Game.csproj.CoreCompileInputs.cache
+E:\Documents\GitHub\PF\Game\obj\Debug\net9.0\Game.sourcelink.json
+E:\Documents\GitHub\PF\Game\obj\Debug\net9.0\Game.dll
+E:\Documents\GitHub\PF\Game\obj\Debug\net9.0\refint\Game.dll
+E:\Documents\GitHub\PF\Game\obj\Debug\net9.0\Game.pdb
+E:\Documents\GitHub\PF\Game\obj\Debug\net9.0\Game.genruntimeconfig.cache
+E:\Documents\GitHub\PF\Game\obj\Debug\net9.0\ref\Game.dll
