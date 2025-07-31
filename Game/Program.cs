@@ -41,26 +41,25 @@ class Battle
 
 class InputHandler
 {
-    public static int ToInt()
+    public static int ToInt(int expectedResult)
     {
-        int result = 0;
+        int isInt;
         bool isValidInt = false;
 
         while (!isValidInt)
         {
             string? userInput = Console.ReadLine();
-            if (int.TryParse(userInput, out result))
+            if (int.TryParse(userInput, out isInt) || isInt == expectedResult)
             {
-                Console.WriteLine($"You Entered: {result}");
+                Console.WriteLine($"You Entered: {expectedResult}");
                 isValidInt = true;
             }
             else
             {
-                Console.WriteLine("Invalid input, try again.\nPlease enter a number: ");
+                Console.WriteLine("Invalid input, try again.\nPlease enter a number:");
             }
         }
-
-        return result;
+        return expectedResult;
     }
 }
 
@@ -74,8 +73,20 @@ class Program
         Console.WriteLine("1.Wooden Club\n2.Sling\n\nPlease select a starting weapon: ");
         int userInput = InputHandler.ToInt();
         //DEBUG
-        Console.WriteLine($"DEBUG:: userInput ={userInput}");
+        Console.WriteLine($"DEBUG:: userInput = {userInput}");
         //
-        
+        if (userInput == 1)
+        {
+
+        }
+        else if (userInput == 2)
+        {
+            
+        }
+        else
+        {
+
+        }
+
     }
 }
