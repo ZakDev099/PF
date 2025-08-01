@@ -27,7 +27,7 @@ class Enemy(string name, int level, int health, int attack)
     public int maxHealth = health;
     public int currentHealth = health;
     public int enemyAttack = attack;
-    public int goldReward = 
+    public int goldReward = level*10;
 }
 
 class Weapon(string name, int damage, int accuracy, int block)
@@ -59,32 +59,37 @@ class ObjectLoader
     }
 }
 
-class Gameplay
+class Play
 {
     public static void CombatRound(Enemy activeEnemy)
     {
         int enemyDamage = activeEnemy.enemyAttack;
-        int playerDamage = Player1.equippedWeapon.weaponDamage;
-        Console.PrintLine($"UH OH! a {activeEnemy} appeared!");
-        while (activeEnemy.currentHealth > 0 || Player1.currentHealth > 0)
+        int playerDamage = player1.equippedWeapon.weaponDamage;
+        Console.PrintLine($"UH OH! a {activeEnemy.enemyName} appeared!");
+        while (activeEnemy.currentHealth > 0 || player1.currentHealth > 0)
         {
             Console.PrintLine("1. Attack\n");
             Console.PrintLine("Please select an action: ");
             int userInput = InputHandler.ToInt([1]);
             if (userInput == 1)
             {
-                activeEnemy.currentHealth -= playerDamage;
+                int damageDealt = random.Next(playerDamage - 1, playerDamage + 1);
+                activeEnemy.currentHealth -= damageDealt;
+                PrintLine($"You hit {activeEnemy.enemyName}, dealing {damageDealt} damage!")
             }
             if (activeEnemy.currentHealth > 0)
             {
-                Player1.currentHealth -= enemyDamage;
+                int damageTaken = random.Next(enemyDamage - 1, enemyDamage + 1);
+                Player1.currentHealth -= damageTaken;
+                PrintLine($"{activeEnemy.enemyName} hits you, dealing {damageTaken} damage!");
             }
         }
         if (activeEnemy.currentHealth <= 0)
         {
             Console.WriteLine($"{activeEnemy} has died!");
-            Player1.gold += activeEnemy.enemyLevel;
-
+            int goldRecieved = random.Next(activeEnemy.gold / 2, activeEnemy.gold * 2);
+            player1.gold += goldRecieved;
+            Console.PrintLine($"You recieved {goldRecieved} gold!");
         }
     }
 }
@@ -119,37 +124,28 @@ class InputHandler
     }
 }
 
-/*class Tools
-{
-    public static int Randomizer(int inputNumber)
-    {
-        
-    }
-}
-*/
-
 class Program
 {
     static void Main(string[] args)
     {
-        random = new()
+        Random random = new();
         Console.WriteLine("Loading Weapons...\n");
         var allWeapons = ObjectLoader.LoadWeapons();
         Console.WriteLine("Loading Enemies...\n");
         var allEnemies = ObjectLoader.LoadEnemies();
         Console.WriteLine("Please enter your name");
-        var Player1 = new Player(Console.ReadLine());
-        Console.WriteLine($"Welcome {Player1.playerName}!");
+        var player1 = new Player(Console.ReadLine());
+        Console.WriteLine($"Welcome {player1.playerName}!");
         Console.WriteLine("1.Wooden Club\n2.Sling\n\nPlease select a starting weapon: ");
         int userInput = InputHandler.ToInt([1, 2]);
         if (userInput == 1)
         {
-            Player1.GiveWeapon(allWeapons["woodenClub"]);
+            player1.GiveWeapon(allWeapons["woodenClub"]);
         }
         else
         {
-            Player1.GiveWeapon(allWeapons["sling"]);
+            player1.GiveWeapon(allWeapons["sling"]);
         }
-
+        Play.CombatRound(allEnemies[slime]);
     }
 }
