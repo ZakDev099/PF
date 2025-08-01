@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Documents\\GitHub\\PF\\Game\\Game.csproj",
+      "projectUniqueName": "C:\\Users\\zakdy\\Documents\\Github\\PF\\Game\\Game.csproj",
       "projectName": "Game",
-      "projectPath": "E:\\Documents\\GitHub\\PF\\Game\\Game.csproj",
+      "projectPath": "C:\\Users\\zakdy\\Documents\\Github\\PF\\Game\\Game.csproj",
       "packagesPath": "C:\\Users\\zakdy\\.nuget\\packages\\",
-      "outputPath": "E:\\Documents\\GitHub\\PF\\Game\\obj\\",
+      "outputPath": "C:\\Users\\zakdy\\Documents\\Github\\PF\\Game\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\zakdy\\AppData\\Roaming\\NuGet\\NuGet.Config"

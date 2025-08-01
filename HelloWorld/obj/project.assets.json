@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Documents\\GitHub\\PF\\HelloWorld\\HelloWorld.csproj",
+      "projectUniqueName": "C:\\Users\\zakdy\\Documents\\Github\\PF\\HelloWorld\\HelloWorld.csproj",
       "projectName": "HelloWorld",
-      "projectPath": "E:\\Documents\\GitHub\\PF\\HelloWorld\\HelloWorld.csproj",
+      "projectPath": "C:\\Users\\zakdy\\Documents\\Github\\PF\\HelloWorld\\HelloWorld.csproj",
       "packagesPath": "C:\\Users\\zakdy\\.nuget\\packages\\",
-      "outputPath": "E:\\Documents\\GitHub\\PF\\HelloWorld\\obj\\",
+      "outputPath": "C:\\Users\\zakdy\\Documents\\Github\\PF\\HelloWorld\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\zakdy\\AppData\\Roaming\\NuGet\\NuGet.Config"

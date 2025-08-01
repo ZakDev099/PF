@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Documents\\GitHub\\PF\\NewProgram\\NewProgram.csproj": {}
+    "C:\\Users\\zakdy\\Documents\\Github\\PF\\NewProgram\\NewProgram.csproj": {}
   },
   "projects": {
-    "E:\\Documents\\GitHub\\PF\\NewProgram\\NewProgram.csproj": {
+    "C:\\Users\\zakdy\\Documents\\Github\\PF\\NewProgram\\NewProgram.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Documents\\GitHub\\PF\\NewProgram\\NewProgram.csproj",
+        "projectUniqueName": "C:\\Users\\zakdy\\Documents\\Github\\PF\\NewProgram\\NewProgram.csproj",
         "projectName": "NewProgram",
-        "projectPath": "E:\\Documents\\GitHub\\PF\\NewProgram\\NewProgram.csproj",
+        "projectPath": "C:\\Users\\zakdy\\Documents\\Github\\PF\\NewProgram\\NewProgram.csproj",
         "packagesPath": "C:\\Users\\zakdy\\.nuget\\packages\\",
-        "outputPath": "E:\\Documents\\GitHub\\PF\\NewProgram\\obj\\",
+        "outputPath": "C:\\Users\\zakdy\\Documents\\Github\\PF\\NewProgram\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\zakdy\\AppData\\Roaming\\NuGet\\NuGet.Config"
