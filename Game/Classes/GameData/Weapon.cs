@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Game.Classes;
 
-class Weapon(string name, int damage, int dropChance)
+public class Weapon(string name, int damage, int dropChance)
 {
     public string WeaponName = name;
     public int WeaponDamage = damage;

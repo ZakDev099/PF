@@ -16,15 +16,13 @@ class Program
     public static bool runProgram = true;
     static void Main(string[] args)
     {
-        Random globalRandom = new();
-        var allWeapons = ObjectLoader.LoadWeapons();
-        var allEnemies = ObjectLoader.LoadEnemies();
-        var player1 = new Player();
-        PlayGame play = new(player1);
-        play.StartGame(allWeapons);
+        GameData GameData = new(new Player(), ObjectLoader.LoadWeapons(), ObjectLoader.LoadEnemies());
+        GameServices GameServices = new(new Random());
+        Event Events = new();
+        Events.StartGame(GameData.Player);
         while (runProgram)
         {
-            Menu.MainMenu(globalRandom, allWeapons, allEnemies, player1, play, runProgram);
+            Menu.MainMenu(GameData, GameServices, Events);
         }
     }
 }

@@ -9,12 +9,9 @@ class Menu
 {
     public static void MainMenu
     (
-        Random globalRandom,
-        SortedDictionary<string, Weapon> allWeapons,
-        SortedDictionary<string, Enemy> allEnemies,
-        Player player1,
-        PlayGame play,
-        bool runProgram
+        GameData GameData,
+        GameServices GameServices,
+        Event Events
     )
     {
         Console.WriteLine
@@ -24,11 +21,11 @@ class Menu
             "3. My Character\n" +
             "4. Quit Game"
         );
-        var userInput = InputHandler.ToInt([1, 2, 3, 4]);
+        var userInput = GameServices.InputToInt([1, 2, 3, 4]);
         if (userInput == 1)
         {
-            Enemy combatEnemy = Enemy.GenerateEnemy(allEnemies, player1.PlayerLevel, globalRandom);
-            play.CombatRound(combatEnemy, globalRandom);
+            Enemy combatEnemy = Enemy.GenerateEnemy(GameData, GameServices);
+            Events.CombatRound(GameData.Player, combatEnemy, GameServices.GlobalRandom);
         }
         else if (userInput == 2)
         {

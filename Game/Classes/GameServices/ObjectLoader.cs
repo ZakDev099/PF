@@ -7,6 +7,11 @@ namespace Game.Classes;
 
 class ObjectLoader
 {
+    public static Random loadGlobalRandom()
+    {
+        Random globalRandom = new();
+        return globalRandom;
+    }
     public static SortedDictionary<string, Weapon> LoadWeapons()
     {
         Console.WriteLine("Loading Weapons...");

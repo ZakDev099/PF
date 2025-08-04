@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Game.Classes;
 
-class Player()
+public class Player()
 {
     public string ?PlayerName = "player";
     public int PlayerLevel = 1;

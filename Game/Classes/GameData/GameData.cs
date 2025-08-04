@@ -6,9 +6,9 @@ using Microsoft.VisualBasic;
 
 namespace Game.Classes;
 
-public class GameData()
+public class GameData(Player player, SortedDictionary<string, Weapon> allWeapons, SortedDictionary<string, Enemy> allEnemies)
 {
-    public static Player ?Player1;
-    public static SortedDictionary<string, Weapon> ?AllWeapons;
-    public static SortedDictionary<string, Enemy> ?AllEnemies;
+    public Player Player = player;
+    public SortedDictionary<string, Weapon> AllWeapons = allWeapons;
+    public SortedDictionary<string, Enemy> AllEnemies = allEnemies;
 }

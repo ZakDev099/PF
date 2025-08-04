@@ -5,15 +5,13 @@ using System.Threading.Tasks;
 
 namespace Game.Classes;
 
-class PlayGame(Player player1)
+class Event()
 {
-    public Player player1 = player1;
-
-    public void StartGame(SortedDictionary<string, Weapon> allWeapons)
+    public void StartGame(Player player)
     {
         Console.WriteLine("Please enter your name");
-        player1.PlayerName = Console.ReadLine();
-        Console.WriteLine($"Welcome {player1.PlayerName}!\n");
+        player.PlayerName = Console.ReadLine();
+        Console.WriteLine($"Welcome {player.PlayerName}!\n");
         /*
         Console.WriteLine
         (
@@ -32,20 +30,20 @@ class PlayGame(Player player1)
         }
         */
     }
-    public void CombatRound(Enemy activeEnemy, Random random)
+    public void CombatRound(Player player, Enemy activeEnemy, Random random)
     {
         int enemyDamage = activeEnemy.EnemyAttack;
-        int playerDamage = player1.EquippedWeapon.WeaponDamage;
+        int playerDamage = player.EquippedWeapon.WeaponDamage;
 
         Console.WriteLine($"\nUH OH! a {activeEnemy.EnemyName} appeared!");
-        while (activeEnemy.CurrentHealth > 0 && player1.CurrentHealth > 0)
+        while (activeEnemy.CurrentHealth > 0 && player.CurrentHealth > 0)
         {
             Console.WriteLine
             (
                 "1. Attack\n" +
                 "Please select an action: "
             );
-            int userInput = InputHandler.ToInt([1]);
+            int userInput = GameServices.InputToInt([1]);
             if (userInput == 1)
             {
                 int damageDealt = random.Next(playerDamage - 1, playerDamage + 2);
@@ -55,7 +53,7 @@ class PlayGame(Player player1)
             if (activeEnemy.CurrentHealth > 0)
             {
                 int damageTaken = random.Next(enemyDamage - 1, enemyDamage + 2);
-                player1.CurrentHealth -= damageTaken;
+                player.CurrentHealth -= damageTaken;
                 Console.WriteLine($"{activeEnemy.EnemyName} hits you, dealing {damageTaken} damage!");
             }
         }
@@ -63,16 +61,16 @@ class PlayGame(Player player1)
         {
             Console.WriteLine($"{activeEnemy.EnemyName} has died!");
             int GoldRecieved = random.Next(activeEnemy.GoldRewardMin, activeEnemy.GoldRewardMax + 1);
-            player1.Gold += GoldRecieved;
+            player.Gold += GoldRecieved;
             Console.WriteLine($"You recieved {GoldRecieved} gold!");
-            Console.WriteLine($"You have {player1.Gold} gold!");
+            Console.WriteLine($"You have {player.Gold} gold!");
             return;
         }
-        else if (player1.CurrentHealth <= 0)
+        else if (player.CurrentHealth <= 0)
         {
             Console.WriteLine("You have died...\nGAME OVER!");
             Console.WriteLine("1. New Game [Work In Progress...]\n2. Exit\nPlease select an option:");
-            int userInput = InputHandler.ToInt([1, 2]);
+            int userInput = GameServices.InputToInt([1, 2]);
             if (userInput == 1)
             {
                 //WORK IN PROGRESS:

@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Game.Classes;
 
-class Enemy
+public class Enemy
 {
     public string EnemyName;
     public int EnemyLevel;
@@ -35,13 +35,16 @@ class Enemy
         }
     }
 
-    public static Enemy GenerateEnemy(SortedDictionary<string, Enemy> allEnemies, int PlayerLevel, Random globalRandom)
+    public static Enemy GenerateEnemy(GameData GameData, GameServices GameServices)
     {
+        var allEnemies = GameData.AllEnemies;
+        var playerLevel = GameData.Player.PlayerLevel;
+        var globalRandom = GameServices.GlobalRandom;
         int randomCap = 0;
         SortedDictionary<int, Enemy> enemyPool = new();
         foreach (Enemy enemy in allEnemies.Values)
         {
-            if (enemy.EnemyLevel == PlayerLevel)
+            if (enemy.EnemyLevel == playerLevel)
             {
                 enemyPool.Add(enemy.SpawnChance, enemy);
                 randomCap += enemy.SpawnChance;
