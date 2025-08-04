@@ -1,7 +1,9 @@
 ﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.Diagnostics;
 using System.Diagnostics.Contracts;
 using System.Dynamic;
+using System.Reflection;
 using System.Reflection.Metadata.Ecma335;
 using System.Security.Cryptography.X509Certificates;
 using Microsoft.VisualBasic;
@@ -23,15 +25,35 @@ class Player()
     }
 }
 
-class Enemy(string name, int level, int health, int attack, int spawnChance, int gold)
+class Enemy
 {
-    public string EnemyName = name;
-    public int EnemyLevel = level;
-    public int MaxHealth = health;
-    public int CurrentHealth = health;
-    public int EnemyAttack = attack;
-    public int SpawnChance = spawnChance;
-    public int GoldReward = gold;
+    public string EnemyName;
+    public int EnemyLevel;
+    public int MaxHealth;
+    public int CurrentHealth;
+    public int EnemyAttack;
+    public int SpawnChance;
+    public int GoldRewardMax;
+    public int GoldRewardMin;
+
+    public Enemy(string name, int level, int health, int attack, int spawnChance, int gold)
+    {
+        EnemyName = name;
+        EnemyLevel = level;
+        MaxHealth = health;
+        CurrentHealth = health;
+        EnemyAttack = attack;
+        SpawnChance = spawnChance;
+        GoldRewardMax = gold + 5;
+        if (gold - 5 >= 1)
+        {
+            GoldRewardMin = gold - 5;
+        }
+        else
+        {
+            GoldRewardMin = 1;
+        }
+    }
 
     public static Enemy GenerateEnemy(SortedDictionary<string, Enemy> allEnemies, int PlayerLevel, Random globalRandom)
     {
@@ -66,7 +88,6 @@ class Weapon(string name, int damage, int rarity)
     public int WeaponRarity = rarity;
 }
 
-// To Do: Add list as return
 class ObjectLoader
 {
     public static SortedDictionary<string, Weapon> LoadWeapons()
@@ -158,11 +179,27 @@ class PlayGame(Player player1)
         if (activeEnemy.CurrentHealth <= 0)
         {
             Console.WriteLine($"{activeEnemy.EnemyName} has died!");
-            int GoldRecieved = random.Next(activeEnemy.GoldReward / 2, activeEnemy.GoldReward * 2);
+            int GoldRecieved = random.Next(activeEnemy.GoldRewardMin, activeEnemy.GoldRewardMax+1);
             player1.Gold += GoldRecieved;
             Console.WriteLine($"You recieved {GoldRecieved} gold!");
             Console.WriteLine($"You have {player1.Gold} gold!");
             return;
+        }
+        else if (player1.CurrentHealth <= 0)
+        {
+            Console.WriteLine("You have died...\nGAME OVER!");
+            Console.WriteLine("1. New Game [Work In Progress...]\n2. Exit\nPlease select an option:");
+            int userInput = InputHandler.ToInt([1, 2]);
+            if (userInput == 1)
+            {
+                string executablePath = Assembly.GetExecutingAssembly().Location;
+                Process.Start(executablePath);
+                Environment.Exit(0);
+            }
+            else
+            {
+                Program.runProgram = false;
+            }
         }
         //WRITE CONDITION FOR CHARACTER DEATH...
     }
@@ -240,6 +277,7 @@ class InputHandler
 
 class Program
 {
+    public static bool runProgram = true;
     static void Main(string[] args)
     {
         Random globalRandom = new();
@@ -248,7 +286,6 @@ class Program
         var player1 = new Player();
         PlayGame play = new(player1);
         play.StartGame(allWeapons);
-        bool runProgram = true;
         while (runProgram)
         {
             Menu.MainMenu(globalRandom, allWeapons, allEnemies, player1, play, runProgram);
