@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\zakdy\\Documents\\Github\\PF\\NewProgram\\NewProgram.csproj",
+      "projectUniqueName": "E:\\Documents\\GitHub\\PF\\NewProgram\\NewProgram.csproj",
       "projectName": "NewProgram",
-      "projectPath": "C:\\Users\\zakdy\\Documents\\Github\\PF\\NewProgram\\NewProgram.csproj",
+      "projectPath": "E:\\Documents\\GitHub\\PF\\NewProgram\\NewProgram.csproj",
       "packagesPath": "C:\\Users\\zakdy\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\zakdy\\Documents\\Github\\PF\\NewProgram\\obj\\",
+      "outputPath": "E:\\Documents\\GitHub\\PF\\NewProgram\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\zakdy\\AppData\\Roaming\\NuGet\\NuGet.Config"

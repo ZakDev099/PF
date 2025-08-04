@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\zakdy\\Documents\\Github\\PF\\HelloWorld\\HelloWorld.csproj": {}
+    "E:\\Documents\\GitHub\\PF\\HelloWorld\\HelloWorld.csproj": {}
   },
   "projects": {
-    "C:\\Users\\zakdy\\Documents\\Github\\PF\\HelloWorld\\HelloWorld.csproj": {
+    "E:\\Documents\\GitHub\\PF\\HelloWorld\\HelloWorld.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\zakdy\\Documents\\Github\\PF\\HelloWorld\\HelloWorld.csproj",
+        "projectUniqueName": "E:\\Documents\\GitHub\\PF\\HelloWorld\\HelloWorld.csproj",
         "projectName": "HelloWorld",
-        "projectPath": "C:\\Users\\zakdy\\Documents\\Github\\PF\\HelloWorld\\HelloWorld.csproj",
+        "projectPath": "E:\\Documents\\GitHub\\PF\\HelloWorld\\HelloWorld.csproj",
         "packagesPath": "C:\\Users\\zakdy\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\zakdy\\Documents\\Github\\PF\\HelloWorld\\obj\\",
+        "outputPath": "E:\\Documents\\GitHub\\PF\\HelloWorld\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\zakdy\\AppData\\Roaming\\NuGet\\NuGet.Config"
