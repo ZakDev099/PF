@@ -1,4 +1,4 @@
-﻿namespace NewProgram;
+﻿namespace Calc;
 using System.IO;
 
 class Program
